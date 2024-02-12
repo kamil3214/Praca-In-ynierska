@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="recieved" type="id" />
+    <item name="recievedEditText" type="id" />
+    <item name="formLayout" type="id" />
+    <item name="titleheader" type="id" />
+</resources>

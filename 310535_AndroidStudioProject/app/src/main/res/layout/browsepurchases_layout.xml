@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/titleheader"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moje zakupy"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/product_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:clickable="false"
+            android:scaleType="fitCenter"
+            app:fabCustomSize="50dp"
+            android:layout_marginStart="10dp"
+            app:fabSize="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maxImageSize="30dp"
+            app:srcCompat="@drawable/purchases" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/stats"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding = "3dp"
+    app:layout_constraintTop_toBottomOf="@+id/titleheader">
+
+<LinearLayout
+    android:id="@+id/date_buttons"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    <Button
+        android:id="@+id/chose_date_start"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp"
+        android:layout_marginRight="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <Button
+            android:textSize="20dp"
+            android:layout_marginLeft="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chose_date_end"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            />
+    </FrameLayout>
+</LinearLayout>
+    
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/chosen_category"
+
+        android:textSize="20dp"
+        android:hint="Kategoria"
+        android:textColorHint="@color/white"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintStart_toStartOf="@id/date_buttons"
+        app:layout_constraintEnd_toEndOf="@id/date_buttons"
+        app:layout_constraintTop_toBottomOf="@id/date_buttons"
+
+        />
+
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:id="@+id/cumulative_desc"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:text="Suma:"
+        app:layout_constraintTop_toBottomOf="@id/chosen_category"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:id="@+id/cumulative"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cumulative_desc"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/search_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/stats">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Button
+                android:textSize="20dp"
+                android:id="@+id/sort_option_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </FrameLayout>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_sort" />
+
+
+    <ImageView
+        android:id="@+id/empty_imageview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.1"
+        android:src="@drawable/no_data"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toTopOf="@+id/no_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.4"
+        android:text="Brak danych"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stats" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
