@@ -1,4 +1,5 @@
 # Praca Inżynierska ISSP Wydział Fizyki i Astronomii UWr
-Temat: Aplikacja mobilna do skanowania paragonów i zarządzania budżetem
-       na urządzenia typu Android
-
+Temat: Aplikacja mobilna do skanowania paragonów i zarządzania budżetem na urządzenia typu Android
+Zawartość repozytorium: 
+•	310535_AndroidStudioProject – folder projektu zawierający jego kod źródłowy, możliwy do zbudowania i kompilacji w środowisku programistycznym Android Studio
+•	310535_Nagranie_Działania_Aplikacji.mp4 – nagranie prezentujące działanie stworzonej aplikacji na emulatorze (emulowany smartfon to Pixel 7)
