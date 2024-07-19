@@ -3,3 +3,4 @@ Temat: Aplikacja mobilna do skanowania paragonów i zarządzania budżetem na ur
 Zawartość repozytorium: <br/>
 •	310535_AndroidStudioProject – folder projektu zawierający jego kod źródłowy, możliwy do zbudowania i kompilacji w środowisku programistycznym Android Studio<br/>
 •	310535_Nagranie_Działania_Aplikacji.mp4 – nagranie prezentujące działanie stworzonej aplikacji na emulatorze smarfonu Pixel 7 <br/>
+• UWr-24-INZ-74388-213735 – praca inżynierska <br/>
